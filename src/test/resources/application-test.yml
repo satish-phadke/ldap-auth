@@ -1,0 +1,32 @@
+spring:
+  ldap:
+    urls: ldap://newvoe1-dc01/dc=newvoe,dc=local
+    base: dc=newvoe,dc=local
+    username: uid=OpsUser
+    password: P@ssw0rdops
+    
+    # Spring LDAP
+    #
+    # In this example we use an embedded ldap server. When using a real one,
+    # you can configure the settings here.
+    #
+    # urls: ldap://newvoe1-dc01/dc=newvoe,dc=local
+    # base: dc=newvoe,dc=local
+    # username: uid=OpsUser
+    # password: P@ssw0rdops 2 OpsUser P@ssw0rdops OpsGroup 3 BusUser1  P@ssw0rdbus1  BusGroup 4 BusUser2  P@ssw0rdbus2  BusGroup
+    # URL: ldap://newvoe1-dc01/dc=newvoe,dc=local
+
+    #embedded:
+     #      base-dn: dc=memorynotfound,dc=com
+     # ldif: classpath:schema-test.ldif
+     # port: 12345
+     # validation:
+      #  enabled: false
+
+
+
+logging:
+  level:
+    - ".=info"
+    - "com.memorynotfound=debug"
+    - "org.springframework=info"
